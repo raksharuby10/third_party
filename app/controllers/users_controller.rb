@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	skip_before_action :authorize_request, only: [:create, :destory]
-  before_action :validate_json_web_token, only: [:update, :show]
+    before_action :validate_json_web_token, only: [:update, :show]
 	before_action :set_user, only: [:show, :destory]
   def index
 	 	@users = User.all
